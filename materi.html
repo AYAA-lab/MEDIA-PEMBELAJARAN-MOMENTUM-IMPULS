@@ -154,6 +154,26 @@
                     </div>
                 </div>
 
+                <!-- Koefisien Restitusi -->
+                <div class="card p-8">
+                    <h2 class="text-3xl font-black mb-4">🧮 Koefisien Restitusi</h2>
+                    <p class="text-lg mb-4">
+                        <strong>Koefisien restitusi (e)</strong> adalah bilangan tak berdimensi yang menunjukkan seberapa "elastis" tumbukan antara dua benda. Nilai e berkisar antara 0 hingga 1: jika e = 1, tumbukan bersifat lenting sempurna (tidak ada kehilangan energi kinetik); jika e = 0, tumbukan bersifat tak lenting sama sekali (benda menempel setelah tumbukan). Secara matematis, untuk tumbukan satu dimensi antara dua benda:
+                    </p>
+                    <div class="bg-yellow-50 p-4 rounded-lg border-2 border-yellow-300 mb-4">
+                        <p class="font-mono text-lg text-center">
+                            <strong>e = (v2' - v1') / (v1 - v2)</strong>
+                        </p>
+                        <p class="text-sm text-gray-600 text-center mt-2">
+                            di mana v1 dan v2 adalah kecepatan sebelum tumbukan, v1' dan v2' adalah kecepatan setelah tumbukan (dengan arah yang sesuai).
+                        </p>
+                    </div>
+                    <p class="text-gray-700 mb-4">Koefisien restitusi membantu menentukan energi kinetik yang hilang dan kecepatan relatif setelah tumbukan — penting untuk memahami pantulan bola, tabrakan kendaraan kecil, dan eksperimen fisika sederhana.</p>
+                    <div class="mt-4">
+                        <button id="openVideoBtn7" class="button warning">▶ Tonton penjelasan singkat (Koefisien Restitusi)</button>
+                    </div>
+                </div>
+
                 <!-- Aplikasi dalam Kehidupan -->
                 <div class="card p-8">
                     <h2 class="text-3xl font-black mb-4">🌍 Aplikasi Momentum dan Impuls dalam Kehidupan Sehari-hari</h2>
@@ -162,8 +182,10 @@
                         <li><strong>Sarung Tinju</strong></li>
                         <li><strong>Matras</strong></li>
                         <li><strong>Crumple Zone pada Mobil</strong></li>
-                        <li><a href="https://youtu.be/R87NBdP5GCc?si=DiN3Ixn_U8_3HGm0" target="_blank" rel="noopener noreferrer">Video: Contoh Aplikasi (YouTube)</a></li>
                     </ol>
+                    <div class="mt-4">
+                        <button id="openVideoBtnApp" class="button warning">▶ Tonton: Aplikasi Momentum & Impuls</button>
+                    </div>
                 </div>
 
                 <!-- Materi PDF -->
@@ -190,10 +212,10 @@
                         Tonton video berikut untuk penjelasan visual tentang Momentum & Impuls.
                     </p>
                     <div class="aspect-video">
-                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe id="main-embedded-video" width="100%" height="100%" src="https://www.youtube.com/embed/dhYdqnKyfSY?si=bgkpthsla1mWAABE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                     <p class="text-sm text-gray-600 mt-2">
-                        Ganti VIDEO_ID di src iframe dengan ID video YouTube yang diinginkan.
+                        Video ditayangkan di dalam halaman agar tidak berpindah ke situs lain.
                     </p>
 
                 </div>
@@ -274,6 +296,32 @@
                 </div>
             </div>
 
+            <!-- In-page video modal for Koefisien Restitusi -->
+            <div id="videoModal7" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-60 hidden z-50">
+                <div class="bg-white rounded-lg overflow-hidden max-w-3xl w-full mx-4">
+                    <div class="p-4 flex justify-between items-center border-b">
+                        <h3 class="font-bold">Video: Koefisien Restitusi</h3>
+                        <button id="closeVideoBtn7" class="button">Tutup</button>
+                    </div>
+                    <div class="aspect-video">
+                        <iframe id="videoIframe7" width="100%" height="100%" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <!-- In-page video modal for Aplikasi (App) -->
+            <div id="videoModalApp" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-60 hidden z-50">
+                <div class="bg-white rounded-lg overflow-hidden max-w-3xl w-full mx-4">
+                    <div class="p-4 flex justify-between items-center border-b">
+                        <h3 class="font-bold">Video: Aplikasi Momentum & Impuls</h3>
+                        <button id="closeVideoBtnApp" class="button">Tutup</button>
+                    </div>
+                    <div class="aspect-video">
+                        <iframe id="videoIframeApp" width="100%" height="100%" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+
             <div class="text-center mt-12 text-white">
                 <p class="text-lg font-bold">Physics Adventure © 2025</p>
                 <p class="text-sm opacity-80">Educational Game for Physics Learning</p>
@@ -285,7 +333,7 @@
                     const modal = document.getElementById('videoModal2');
                     const closeBtn = document.getElementById('closeVideoBtn2');
                     const iframe = document.getElementById('videoIframe2');
-                    const embedSrc = 'https://www.youtube.com/embed/SE9GbAs3_vk?si=a8B_emCGx8OEJMMU&autoplay=1';
+                    const embedSrc = 'https://www.youtube.com/embed/dhYdqnKyfSY?si=bgkpthsla1mWAABE&autoplay=1';
                     function open(){ iframe.src = embedSrc; modal.classList.remove('hidden'); }
                     function close(){ modal.classList.add('hidden'); iframe.src = ''; }
                     openBtn && openBtn.addEventListener('click', open);
@@ -300,7 +348,7 @@
                     const modal3 = document.getElementById('videoModal3');
                     const closeBtn3 = document.getElementById('closeVideoBtn3');
                     const iframe3 = document.getElementById('videoIframe3');
-                    const embedSrc3 = 'https://www.youtube.com/embed/AlHlZR8kbV8?si=l32Wm42qriYtLaLp&autoplay=1';
+                    const embedSrc3 = 'https://www.youtube.com/embed/Q7fQApv6TVc?si=D8T89Snm9r5DbD4Y&autoplay=1';
                     function open3(){ iframe3.src = embedSrc3; modal3.classList.remove('hidden'); }
                     function close3(){ modal3.classList.add('hidden'); iframe3.src = ''; }
                     openBtn3 && openBtn3.addEventListener('click', open3);
@@ -315,7 +363,7 @@
                     const modal4 = document.getElementById('videoModal4');
                     const closeBtn4 = document.getElementById('closeVideoBtn4');
                     const iframe4 = document.getElementById('videoIframe4');
-                    const embedSrc4 = 'https://www.youtube.com/embed/lbhF55PZHkA?si=uZfV7q0io-T7V2Vx&autoplay=1';
+                    const embedSrc4 = 'https://www.youtube.com/embed/PCnlG7s0_RE?si=_OEEiCpGyzo--JpQ&autoplay=1';
                     function open4(){ iframe4.src = embedSrc4; modal4.classList.remove('hidden'); }
                     function close4(){ modal4.classList.add('hidden'); iframe4.src = ''; }
                     openBtn4 && openBtn4.addEventListener('click', open4);
@@ -330,7 +378,7 @@
                     const modal5 = document.getElementById('videoModal5');
                     const closeBtn5 = document.getElementById('closeVideoBtn5');
                     const iframe5 = document.getElementById('videoIframe5');
-                    const embedSrc5 = 'https://www.youtube.com/embed/TA4qC3p36NU?si=cc98F1OM_PGkOpem&autoplay=1';
+                    const embedSrc5 = 'https://www.youtube.com/embed/l7gRj7scWYc?si=Ah6gdAE0ymG2r-3v&autoplay=1';
                     function open5(){ iframe5.src = embedSrc5; modal5.classList.remove('hidden'); }
                     function close5(){ modal5.classList.add('hidden'); iframe5.src = ''; }
                     openBtn5 && openBtn5.addEventListener('click', open5);
@@ -338,6 +386,35 @@
                     modal5 && modal5.addEventListener('click', (e)=>{ if(e.target===modal5) close5(); });
                 })();
             </script>
+                        <script>
+                            (function(){
+                                const openBtn7 = document.getElementById('openVideoBtn7');
+                                const modal7 = document.getElementById('videoModal7');
+                                const closeBtn7 = document.getElementById('closeVideoBtn7');
+                                const iframe7 = document.getElementById('videoIframe7');
+                                const embedSrc7 = 'https://www.youtube.com/embed/-DkT6y41kwg?si=g9lV5C1kSrr-bEwr&autoplay=1';
+                                function open7(){ iframe7.src = embedSrc7; modal7.classList.remove('hidden'); }
+                                function close7(){ modal7.classList.add('hidden'); iframe7.src = ''; }
+                                openBtn7 && openBtn7.addEventListener('click', open7);
+                                closeBtn7 && closeBtn7.addEventListener('click', close7);
+                                modal7 && modal7.addEventListener('click', (e)=>{ if(e.target===modal7) close7(); });
+                            })();
+                        </script>
+
+                        <script>
+                            (function(){
+                                const openBtnApp = document.getElementById('openVideoBtnApp');
+                                const modalApp = document.getElementById('videoModalApp');
+                                const closeBtnApp = document.getElementById('closeVideoBtnApp');
+                                const iframeApp = document.getElementById('videoIframeApp');
+                                const embedSrcApp = 'https://www.youtube.com/embed/R87NBdP5GCc?si=DiN3Ixn_U8_3HGm0&autoplay=1';
+                                function openApp(){ iframeApp.src = embedSrcApp; modalApp.classList.remove('hidden'); }
+                                function closeApp(){ modalApp.classList.add('hidden'); iframeApp.src = ''; }
+                                openBtnApp && openBtnApp.addEventListener('click', openApp);
+                                closeBtnApp && closeBtnApp.addEventListener('click', closeApp);
+                                modalApp && modalApp.addEventListener('click', (e)=>{ if(e.target===modalApp) closeApp(); });
+                            })();
+                        </script>
             
         </div>
     </div>
