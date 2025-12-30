@@ -50,21 +50,29 @@
                 <div class="card p-8">
                     <h2 class="text-3xl font-black mb-4">⚡ Apa itu Momentum?</h2>
                     <p class="text-lg mb-4">
-                        <strong>Momentum</strong> adalah besaran fisika yang menunjukkan seberapa sulit suatu benda yang bergerak untuk dihentikan. Momentum dihitung sebagai hasil kali massa benda dengan kecepatannya.
+                        <strong>Momentum</strong> (simbol p) adalah besaran fisika yang menyatakan "kuantitas gerak" suatu benda: seberapa sulit benda itu dihentikan. Momentum didefinisikan sebagai hasil kali massa dan kecepatan.
                     </p>
-                    
+
                     <div class="bg-blue-50 p-4 rounded-lg border-2 border-blue-300 mb-4">
                         <p class="font-mono text-lg text-center">
                             <strong>p = m × v</strong>
                         </p>
                         <p class="text-sm text-gray-600 text-center mt-2">
-                            p = momentum, m = massa, v = kecepatan
+                            p = momentum, m = massa (kg), v = kecepatan (m/s)
                         </p>
-                        <p class="text-xs text-gray-500 text-center mt-1 italic">Catatan: `p` dan `v` adalah besaran vektor (memiliki arah).</p>
+                        <p class="text-xs text-gray-500 text-center mt-1 italic">Catatan: <strong>p</strong> dan <strong>v</strong> adalah besaran vektor (memiliki arah).</p>
                     </div>
+
                     <p class="text-gray-700">
-                        Momentum adalah besaran vektor, artinya memiliki arah. Jika dua benda bergerak berlawanan arah, momentumnya bisa saling meniadakan.
+                        Momentum adalah besaran vektor — selain besar, arah momentum penting untuk operasi penjumlahan atau pengurangan antar momentum. Untuk gerak 2D kita menuliskan komponennya: p = (p_x, p_y) = m (v_x, v_y).
                     </p>
+
+                    <div class="bg-white p-3 rounded border-2 border-gray-200 mt-4">
+                        <div class="font-bold">Contoh singkat</div>
+                        <p class="text-sm text-gray-700">Sebuah bola bermassa 2 kg bergerak ke arah timur dengan kecepatan 3 m/s. Momentum bola: p = 2 × 3 = 6 kg·m/s (arah timur).</p>
+                        <p class="text-sm text-gray-700">Jika bergerak pada bidang dua dimensi: v = (3, 4) m/s, maka p = m v = (6, 8) kg·m/s.</p>
+                    </div>
+
                     <div class="mt-4">
                         <button id="openVideoBtn2" class="button warning">▶ Tonton penjelasan singkat (Momentum)</button>
                     </div>
@@ -74,20 +82,25 @@
                 <div class="card p-8">
                     <h2 class="text-3xl font-black mb-4">💥 Apa itu Impuls?</h2>
                     <p class="text-lg mb-4">
-                        <strong>Impuls</strong> adalah perubahan momentum suatu benda. Impuls terjadi ketika gaya bekerja pada benda dalam waktu tertentu.
+                        <strong>Impuls</strong> (simbol I atau Δp) adalah perubahan momentum yang dialami benda ketika resultan gaya bekerja selama selang waktu tertentu.
                     </p>
+
                     <div class="bg-green-50 p-4 rounded-lg border-2 border-green-300 mb-4">
                         <p class="font-mono text-lg text-center">
-                            <strong>Δp = F × Δt</strong>
+                            <strong>Δp = F_avg × Δt</strong>
                         </p>
                         <p class="text-sm text-gray-600 text-center mt-2">
-                            Δp = perubahan momentum (vektor), F = gaya rata-rata (vektor), Δt = selang waktu (skalar)
+                            Δp = perubahan momentum (vektor), F_avg = gaya rata-rata (vektor), Δt = selang waktu (skalar)
                         </p>
-                        <p class="text-xs text-gray-500 text-center mt-1 italic">Catatan: Impuls (Δp) adalah besaran vektor, arah sama dengan resultan gaya rata-rata.</p>
+                        <p class="text-xs text-gray-500 text-center mt-1 italic">Catatan: Impuls arahnya sama dengan arah resultan gaya rata-rata.</p>
                     </div>
-                    <p class="text-gray-700">
-                        Impuls menjelaskan mengapa benda bisa berubah kecepatannya ketika mendapat dorongan atau tumbukan.
-                    </p>
+
+                    <div class="bg-white p-3 rounded border-2 border-gray-200 mt-4">
+                        <div class="font-bold">Contoh singkat</div>
+                        <p class="text-sm text-gray-700">Jika gaya rata-rata 10 N bekerja selama 0.5 s, impuls yang diberikan adalah Δp = 10 × 0.5 = 5 N·s (arah gaya).</p>
+                        <p class="text-sm text-gray-700">Jika sebuah bola bermassa 0.2 kg mendapat impuls 2 N·s, perubahan kecepatannya Δv = Δp / m = 2 / 0.2 = 10 m/s.</p>
+                    </div>
+
                     <div class="mt-4">
                         <button id="openVideoBtn3" class="button warning">▶ Tonton penjelasan singkat (Impuls)</button>
                     </div>
@@ -97,17 +110,15 @@
                 <div class="card p-8">
                     <h2 class="text-3xl font-black mb-4">🔗 Hubungan Momentum dan Impuls</h2>
                     <p class="text-lg mb-4">
-                        Dari definisi di atas, kita bisa melihat bahwa impuls sama dengan perubahan momentum:
+                        Secara umum, impuls sama dengan perubahan momentum: impuls adalah integral dari gaya terhadap waktu. Jika gaya berubah terhadap waktu, kita tulis:
                     </p>
                     <div class="bg-yellow-50 p-4 rounded-lg border-2 border-yellow-300 mb-4">
                         <p class="font-mono text-lg text-center">
-                            <strong>Impuls = Δp = m × Δv</strong>
+                            <strong>Δp = ∫ F(t) dt</strong>
                         </p>
-                        <p class="text-xs text-gray-500 text-center mt-1 italic">Catatan: Δp dan Δv adalah besaran vektor.</p>
+                        <p class="text-xs text-gray-500 text-center mt-1 italic">Untuk gaya konstan, persamaan ini menjadi Δp = F × Δt.</p>
                     </div>
-                    <p class="text-gray-700">
-                        Ini berarti ketika suatu gaya bekerja pada benda, momentum benda akan berubah sebesar impuls yang diberikan.
-                    </p>
+                    <p class="text-gray-700">Ini berarti gaya yang bekerja dalam waktu singkat (impuls besar) dapat menyebabkan perubahan besar pada momentum (mis. pukulan atau tabrakan).</p>
                     <div class="mt-4">
                         <button id="openVideoBtn4" class="button warning">▶ Tonton penjelasan singkat (Hubungan)</button>
                     </div>
@@ -116,21 +127,19 @@
                 <!-- Hukum Kekekalan Momentum -->
                 <div class="card p-8">
                     <h2 class="text-3xl font-black mb-4">⚖️ Hukum Kekekalan Momentum</h2>
-                    <p class="text-lg mb-4">
-                        Dalam sistem tertutup (tidak ada gaya luar), total momentum sebelum dan sesudah interaksi tetap sama.
-                    </p>
+                    <p class="text-lg mb-4">Dalam sistem tertutup (tanpa gaya luar), total momentum sebelum interaksi sama dengan total momentum setelah interaksi:</p>
                     <div class="bg-purple-50 p-4 rounded-lg border-2 border-purple-300 mb-4">
                         <p class="font-mono text-lg text-center">
                             <strong>p₁ + p₂ = p₁' + p₂'</strong>
                         </p>
-                        <p class="text-sm text-gray-600 text-center mt-2">
-                            Momentum total sebelum = Momentum total sesudah
-                        </p>
-                        <p class="text-xs text-gray-500 text-center mt-1 italic">Catatan: p₁, p₂ adalah besaran vektor — penjumlahan memperhatikan arah.</p>
+                        <p class="text-xs text-gray-500 text-center mt-1 italic">Perhatikan arah: p adalah vektor.</p>
                     </div>
-                    <p class="text-gray-700">
-                        Hukum ini sangat penting dalam memahami tumbukan antar benda, seperti dalam game Physics Adventure.
-                    </p>
+
+                    <div class="bg-white p-3 rounded border-2 border-gray-200 mt-4">
+                        <div class="font-bold">Contoh: tumbukan 1D</div>
+                        <p class="text-sm text-gray-700">Benda A (m=1 kg) bergerak ke kanan 4 m/s; benda B (m=2 kg) diam. Jika setelah tumbukan keduanya bergerak bersama (tidak lenting), kecepatan bersama v' = (1·4 + 2·0)/(1+2) = 4/3 ≈ 1.33 m/s.</p>
+                    </div>
+
                     <div class="mt-4">
                         <button id="openVideoBtn6" class="button warning">▶ Tonton penjelasan singkat (Hukum Kekekalan)</button>
                     </div>
@@ -141,16 +150,22 @@
                     <h2 class="text-3xl font-black mb-4">💥 Jenis-jenis Tumbukan</h2>
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                         <div class="bg-red-50 p-4 rounded border-2 border-red-300">
-                            <h3 class="font-bold text-lg mb-2">Tumbukan Lenting Sempurna</h3>
-                            <p class="text-sm">Energi kinetik dan momentum terjaga. Benda memantul sempurna.</p>
+                            <h3 class="font-bold text-lg mb-2">Tumbukan Lenting Sempurna (Elastis)</h3>
+                            <p class="text-sm">Momentum dan energi kinetik total masing-masing sebelum dan sesudah tumbukan tetap.</p>
+                            <p class="text-xs text-gray-600 mt-2">Rumus (1D, dua benda):
+                                <br/>v1' = ((m1 - m2)u1 + 2 m2 u2) / (m1 + m2)
+                                <br/>v2' = ((m2 - m1)u2 + 2 m1 u1) / (m1 + m2)
+                            </p>
                         </div>
                         <div class="bg-yellow-50 p-4 rounded border-2 border-yellow-400">
                             <h3 class="font-bold text-lg mb-2">Tumbukan Lenting Sebagian</h3>
-                            <p class="text-sm">Energi kinetik sebagian hilang. Benda memantul tapi tidak sempurna.</p>
+                            <p class="text-sm">Momentum tetap, tetapi sebagian energi kinetik hilang (tidak dipertahankan).</p>
+                            <p class="text-xs text-gray-600 mt-2">Koefisien restitusi 0 < e < 1.</p>
                         </div>
                         <div class="bg-orange-50 p-4 rounded border-2 border-orange-300">
-                            <h3 class="font-bold text-lg mb-2">Tumbukan Tak Lenting Sama Sekali</h3>
-                            <p class="text-sm">Momentum terjaga, energi kinetik berkurang banyak. Benda menempel atau bergerak bersama.</p>
+                            <h3 class="font-bold text-lg mb-2">Tumbukan Tak Lenting Sama Sekali (Tidak Lenting)</h3>
+                            <p class="text-sm">Benda menempel setelah tumbukan; momentum tetap tetapi energi kinetik berkurang secara maksimal.</p>
+                            <p class="text-xs text-gray-600 mt-2">Contoh: dua benda menempel dan bergerak bersama setelah tumbukan.</p>
                         </div>
                     </div>
                     <div class="mt-4">
