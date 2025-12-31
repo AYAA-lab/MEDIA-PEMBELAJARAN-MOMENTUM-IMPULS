@@ -334,11 +334,11 @@ Tailwind CSS classes sudah integrated. Edit di style tag atau HTML classes.
 
 | Level | Konsep | Rumus |
 |-------|--------|-------|
-| 1-3 | Momentum | p = m·v |
-| 4-5 | Impuls | I = F·Δt = Δp |
-| 6-7 | Tumbukan | m₁v₁ + m₂v₂ = (m₁+m₂)v' |
-| 8 | Impuls Vektor | F = m(v₂ - v₁)/t |
-| 9 | Tumbukan Lenting | v₁' = ((m₁-m₂)v₁ + 2m₂v₂)/(m₁+m₂) |
+| 1-3 | Momentum | **p** = m·**v** |
+| 4-5 | Impuls | **I** = **F**·Δt = Δ**p** |
+| 6-7 | Tumbukan | m₁**v₁** + m₂**v₂** = (m₁+m₂)**v'** |
+| 8 | Impuls Vektor | **F** = m(**v₂** - **v₁**)/t |
+| 9 | Tumbukan Lenting | **v₁'** = ((m₁-m₂)**v₁** + 2m₂**v₂**)/(m₁+m₂) |
 
 ---
 

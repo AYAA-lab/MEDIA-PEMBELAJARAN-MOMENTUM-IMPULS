@@ -696,7 +696,7 @@
                             { id: 'ans-p1-angle', label: 'Arah (deg dari timur, ccw)', unit: '°', correctValue: 143.13, tolerance: 0.5 }
                         ],
                         feedback: { correct: "Betul — gunakan komponen vektor dan arctan2 untuk sudut.", wrong: "Coba lagi — hitung p_x = m·v_x dan p_y = m·v_y lalu gabungkan." },
-                        explanation: "p_x = -400 kg·m/s (barat), p_y = +300 kg·m/s (utara). |p| = sqrt(400^2 + 300^2) = 500 kg·m/s. sudut = arctan2(300,-400) ≈ 143.13° (dari timur, ccw)."
+                        explanation: "<strong>p</strong>_x = -400 kg·m/s (barat), <strong>p</strong>_y = +300 kg·m/s (utara). |<strong>p</strong>| = sqrt(400^2 + 300^2) = 500 kg·m/s. sudut = arctan2(300,-400) ≈ 143.13° (dari timur, ccw)."
                     } 
                 },
 
@@ -711,7 +711,7 @@
                     options: { 
                         input: { correctValue: 8/3, tolerance: 0.05, unit: 'N.s' },
                         feedback: { correct: "Betul — impuls = luas area di bawah kurva antara 3–5 s (≈ 2.67 N·s).", wrong: "Coba lagi — hitung luas area di bawah kurva antara t=3 dan t=5 s (hasil ≈ 2.67 N·s)." }, 
-                        explanation: "Impuls = integral F dt; untuk kurva ini luasnya sama dengan 8/3 N·s ≈ 2.67 N·s. Anda dapat memasukkan 2.67 atau pecahan 8/3."
+                        explanation: "Impuls = integral <strong>F</strong> dt; untuk kurva ini luasnya sama dengan 8/3 N·s ≈ 2.67 N·s. Anda dapat memasukkan 2.67 atau pecahan 8/3."
                     } 
                 },
 
@@ -727,7 +727,7 @@
                             { id: 'ans-acc3', label: 'Percepatan rata-rata (m/s²)', unit: 'm/s²', correctValue: -7.5, tolerance: 0.01 }
                         ],
                         feedback: { correct: "Benar — gunakan Δp = m(v_f - v_i) dan F_avg = Δp/Δt.", wrong: "Coba ulang: Hitung Δv lalu Δp = m·Δv, lalu bagi dengan Δt untuk F_avg." },
-                        explanation: "m = 0.15 kg; Δv = -9 - 6 = -15 m/s; I = 0.15 * -15 = -2.25 N.s; F_avg = -2.25 / 2 = -1.125 N; a_avg = -15 / 2 = -7.5 m/s²."
+                        explanation: "m = 0.15 kg; Δv = -9 - 6 = -15 m/s; <strong>I</strong> = 0.15 * -15 = -2.25 N·s; <strong>F</strong>_avg = -2.25 / 2 = -1.125 N; a_avg = -15 / 2 = -7.5 m/s²."
                     } 
                 },
 
@@ -2190,7 +2190,7 @@
                     document.getElementById('score-display').innerText = state.score;
                     setTimeout(() => {
                         document.getElementById('quiz-submit-btn').disabled = false;
-                        fb.innerText = `Coba lagi! (Petunjuk: ${feedbackText})`;
+                        fb.innerHTML = `Coba lagi! (Petunjuk: ${feedbackText})`; 
                         fb.className = "text-center font-black mt-2 h-auto text-yellow-600 text-sm";
                     }, 2000);
                 }
